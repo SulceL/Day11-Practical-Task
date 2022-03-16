@@ -51,6 +51,25 @@ for (int i = 0; i < myStringArray2D.GetLength(0); i++)
 {
     for (int k = 0; k < myStringArray2D.GetLength(1); k++)
     { 
-     Console.WriteLine ($"{myStringArray2D [i,k]} "); 
+     Console.WriteLine($"{myStringArray2D [i,k]} "); 
     }
 }
+Console.WriteLine();
+Console.WriteLine();
+//Task 1
+
+Console.WriteLine("Please enter the number from 1 to 100");
+int sumOfNumbers =0;
+do {
+    string number = Console.ReadLine();
+    bool numberParse = int.TryParse(number, out int input1);
+    sumOfNumbers += input1;
+    if (sumOfNumbers < 100)
+    {
+        Console.WriteLine("Please enter another number");
+    }
+}
+while (sumOfNumbers < 100);
+
+
+Console.WriteLine($"The sum of all numbers is {sumOfNumbers}");
